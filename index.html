@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>チームタイムカード</title>
+  <script defer src="main.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="p-8 font-sans">
+  <div class="max-w-2xl mx-auto">
+    <h1 class="text-2xl font-bold mb-6">チームタイムカード</h1>
+    
+    <div class="grid grid-cols-2 gap-6 mb-8">
+      <div id="member1" class="member-card bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-lg font-bold mb-2">nishida</h2>
+        <div class="icon-container">
+          <img id="icon1" src="icons/nishida_sleeping.png" alt="nishida icon" class="member-icon">
+        </div>
+        <div class="attendance-stats mb-4">
+          <p class="text-sm text-gray-600">今月の出勤: <span id="monthlyTotal1">0</span>回</p>
+          <p class="text-sm text-gray-600">今年の出勤: <span id="yearlyTotal1">0</span>回</p>
+        </div>
+        <button id="clockInBtn1" class="clock-in-btn">出勤</button>
+        <p id="status1"></p>
+      </div>
+
+      <!-- メンバー2 -->
+      <div id="member2" class="member-card bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-lg font-bold mb-2">hashimoto</h2>
+        <div class="icon-container">
+          <img id="icon2" src="icons/hashimoto_sleeping.png" alt="hashimoto icon" class="member-icon">
+        </div>
+        <div class="attendance-stats mb-4">
+          <p class="text-sm text-gray-600">今月の出勤: <span id="monthlyTotal2">0</span>回</p>
+          <p class="text-sm text-gray-600">今年の出勤: <span id="yearlyTotal2">0</span>回</p>
+        </div>
+        <button id="clockInBtn2" class="clock-in-btn">出勤</button>
+        <p id="status2"></p>
+      </div>
+    </div>
+
+    <button id="historyBtn" class="bg-gray-500 text-white px-4 py-2 rounded w-full mb-4">
+      出勤履歴を見る
+    </button>
+
+    <div id="historyModal" class="fixed inset-0 bg-black bg-opacity-50 hidden">
+      <div class="relative bg-white p-6 rounded-lg max-w-2xl mx-auto my-8">
+        <h2 class="text-xl font-bold mb-4">出勤履歴</h2>
+        <div id="historyList" class="space-y-4"></div>
+        <button id="closeHistory" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700">
+          ✕
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
 
