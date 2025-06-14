@@ -4,14 +4,14 @@ document.addEventListener("DOMContentLoaded", () => {
     { 
       id: 1, 
       name: "nishida", 
-      sleepingIcon: "icons/nishida_sleeping.png",
-      wakingIcon: "icons/nishida_waking.png"
+      sleepingIcon: "nishida_sleeping.png",
+      wakingIcon: "nishida_waking.png"
     },
     { 
       id: 2, 
       name: "hashimoto", 
-      sleepingIcon: "icons/hashimoto_sleeping.png",
-      wakingIcon: "icons/hashimoto_waking.png"
+      sleepingIcon: "hashimoto_sleeping.png",
+      wakingIcon: "hashimoto_waking.png"
     }
   ];
 
