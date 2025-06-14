@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (lastClockIn) {
       const icon = document.getElementById(`icon${member.id}`);
-      icon.src = member.wakingIcon;
+      icon.src = member.awakeIcon;
       updateStatus(member.id, lastClockIn.time, lastClockIn.isEarly);
       updateButtonState(button, true);
     }
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const now = new Date();
       const time = now.toLocaleTimeString();
       const icon = document.getElementById(`icon${member.id}`);
-      icon.src = member.wakingIcon; // アイコンを起きている状態に変更
+      icon.src = member.awakeIcon; // アイコンを起きている状態に変更
       const isEarly = now.getHours() < 7;
       
       // ヒストリーに追加
